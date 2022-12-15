@@ -57,7 +57,7 @@ def outer_edges(sensors):
     return candidate_points
 
 
-def part1(sensors, candidates):
+def solve(sensors, candidates):
     count = 0
     for p in candidates:
         for s, b in sensors:
@@ -73,5 +73,5 @@ def part1(sensors, candidates):
 
 if __name__ == '__main__':
     sensors = list(parse())
-    part1(sensors, on_line(sensors, 2000000))
-    part1(sensors, outer_edges(sensors))
+    solve(sensors, on_line(sensors, 2000000))
+    solve(sensors, outer_edges(sensors))
